@@ -1,0 +1,610 @@
+
+// Importing Font
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;700&display=swap')
+
+// Colors
+
+$primary: #092334
+$bg: #EBF4FF
+$text: #666666
+$textWhite: rgba(255,255,255,.6)
+$accent: #3B9DDD
+$placeholder: #586C7B
+$secondary: #D6E9FF
+
+$resourceHorizontalPadding: 45px
+
+$box-shadow: 1px 2px 4px rgba(0,0,0,.1)
+
+
+
+// General Styles
+
+h1
+	font-size: 1.4rem
+	font-weight: 700
+
+p
+	color: $text
+	line-height: 1.4rem
+
+.full-width
+	width: 100%
+
+.input
+	background-color: $bg
+	border: 0
+	color: rgba(0,0,0,.7)
+	padding: 12px 22px
+	border-radius: 10px
+	outline: 0
+	font-size: 1rem
+
+	&::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder
+		color: $placeholder
+
+	&.white
+		background-color: #fff
+
+
+.btn
+	border: 0
+	border-radius: 10px
+	transition: .24s
+	font-size: 1rem
+	outline: 0
+	cursor: pointer
+	text-decoration: none
+	padding: 14px
+	display: inline-block
+
+	&.btn-primary
+		background-color: $accent
+		box-shadow: none !important
+		color: #fff
+		font-weight: 700
+		&:hover
+			background-color: darken($accent, 5)
+
+	&.btn-secondary
+		background-color: $secondary
+		color: $text
+		padding: 12px 22px
+
+		&:hover
+			background-color: darken($secondary, 5)
+
+
+
+
+
+
+
+// Owl Carousel Customization
+
+.owl-dot
+
+	transition: .24s
+
+	&:hover
+		span
+			opacity: .4
+	&.active
+		span
+			opacity: 1
+
+	span
+		background-color: $accent !important
+		opacity: .2
+
+
+*
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	box-sizing: border-box
+	font-family: 'Karla', sans-serif
+	font-weight: 400
+
+html
+	font-size: 13pt
+
+body
+	padding: 0
+	margin: 0
+	background-color: $bg
+
+	header
+		background-color: $primary
+		margin: 0
+		position: relative
+		padding: 100px 0
+		text-align: center
+
+		#logo
+			margin: 0
+			color: #fff
+			font-size: 3rem
+			font-weight: 700
+			text-decoration: none !important
+
+		&.small
+			padding: 0 40px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			height: 100px
+			text-align: left
+
+			.discordLogin
+				margin-top: 0
+
+		.discordLogin
+			color: #000 !important
+			font-weight: 400 !important
+			margin-top: 1rem
+
+
+		#sub
+			color: rgba(255,255,255,.7)
+			font-weight: 400
+			font-size: 1rem
+			margin-top: 1rem
+
+	.container
+		max-width: 1200px
+		position: relative
+		margin: 50px auto
+		width: 85%
+
+		.sidebar
+			h1
+				color: $primary
+				font-weight: 700
+				font-size: 1.2rem
+
+			.tagList
+				list-style-type: none
+				padding: 0
+
+				li
+					color: $text
+					padding: 10px 0 10px 20px
+					margin: 5px 0
+					left: -20px
+					position: relative
+					border-radius: 5px
+					cursor: pointer
+					transition: .24s
+
+					.delete
+						font-size: .8rem
+						float: right
+						position: relative
+						padding-right: 15px
+						display: none
+						height: 45px
+						top: -10px
+						align-items: center
+
+					&:hover
+						background-color: transparentize(#000, .95)
+
+
+					&.active
+						background-color: $primary
+						color: #fff
+
+						.delete
+							display: flex
+
+
+
+
+
+
+
+		.main
+			margin-left: 50px
+
+			.search-container
+				text-align: left
+				display: flex
+				align-items: center
+
+				.icon
+					left: 45px
+					position: relative
+					width: 25px
+
+				input
+					padding: 16px 30px
+					padding-left: 60px
+					color: rgba(0,0,0,.7)
+					box-shadow: 2px 4px 4px rgba(0,0,0,.1)
+					border: 0
+					outline: 0
+					border-radius: 10px
+					width: 100%
+					font-size: 1rem
+
+
+			#featured
+				background-color: $primary
+				padding: 20px 100px
+				margin-top: 50px
+				border-radius: 30px
+
+				h1
+					color: $accent
+					font-size: 1rem
+					font-weight: 700
+					left: -50px
+					position: relative
+
+				.item
+					padding-top: 50px
+					padding-left: 35px
+					position: relative
+
+					a
+						text-decoration: none
+
+					h1
+						color: #fff
+						font-size: 1.2rem
+						font-weight: 700
+						left: 0
+
+					p
+						color: $textWhite
+						font-weight: 300
+
+
+					img
+						width: 50px
+						position: absolute
+						left: 0
+						top: 20px
+						z-index: -1
+
+
+
+			#resources
+				position: relative
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+
+				.no-results
+					margin: 2rem
+					font-size: 1.2rem
+
+
+				.resource
+					width: 100%
+					float: left
+					margin-top: 50px
+					background: #fff
+					padding: 20px $resourceHorizontalPadding
+					position: relative
+					border-radius: 30px
+					padding-bottom: 40px
+					text-decoration: none
+					transition: .24s
+
+					img
+						position: absolute
+						left: -30px
+						top: 0
+						width: 60px
+
+					h1
+						font-size: 1.2rem
+						font-weight: 700
+						display: inline-block
+						color: $primary
+
+					.price
+						display: inline-block
+						float: right
+						color: $primary
+
+					p
+						color: $text
+						line-height: 1.4rem
+						margin-top: 0
+
+					footer
+						position: absolute
+						bottom: 15px
+						font-size: .85rem
+						display: block
+						width: calc(100% - #{$resourceHorizontalPadding * 2})
+
+						.by
+							color: $primary
+
+						.date
+							color: $primary
+							opacity: .6
+							float: right
+							text-align: right
+
+
+
+
+	// CHECKOUT PAGE
+	.container.checkout
+		max-width: 700px
+
+		.back
+			text-decoration: none
+			color: $primary
+			opacity: .7
+			transition: .24s
+
+			&:hover
+				opacity: .9
+
+		#checkout
+			background-color: #fff
+			margin: auto
+			margin-top: 10px
+			padding: 36px 60px
+			border-radius: 30px
+
+			.input,.btn
+				width: 100%
+
+			.btn
+				margin-top: 10px
+
+			h1
+				margin: 0
+
+			footer
+				margin-top: 20px
+
+				.price
+					font-size: 1rem
+					color: $text
+
+					span
+						color: $primary
+						font-weight: 700
+
+
+
+	// Developer Dashboard
+
+	nav#dashboard-nav
+		background: $primary
+		position: relative
+		min-height: 100px
+		padding: 20px 40px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		h1
+			font-size: 3rem
+			margin: 0
+			display: inline-block
+			color: #fff
+
+		.left
+			float: left
+
+		.right
+			float: right
+
+			h4
+				color: rgba(255,255,255,.6)
+				float: left
+
+				span
+					color: #fff
+
+			.btn
+				float: right
+				font-size: 1rem
+				display: block
+				margin: 14px
+				color: #000
+				font-weight: 400
+				padding: 10px 16px
+
+
+	.dashboard
+		margin-top: 100px
+
+		.title
+			text-align: center
+
+		nav
+			max-width: 1000px
+			margin: 50px auto
+			ul
+				list-style-type: none
+				display: flex
+				justify-content: space-between
+				padding: 0
+				text-align: center
+				flex-wrap: wrap
+
+				a
+					text-align: center
+					width: 300px
+					padding: 20px
+					border-radius: 10px
+					position: relative
+					text-decoration: none
+					color: transparentize($primary, .4)
+					transition: .24s
+					border-radius: 10px
+					display: flex
+					align-items: center
+					justify-content: center
+
+
+					&:hover
+						color: transparentize($primary, .2)
+
+
+					&.active
+						background-color: $secondary
+						li
+							color: $primary
+							font-weight: 700
+							span
+								font-weight: 700
+
+		hr
+			max-width: 300px
+			width: 90%
+			background-color: rgba(0,0,0,.3)
+
+
+		// My Resources
+
+		#resourceTable
+			margin: auto
+			max-width: 1000px
+			width: 100%
+			border-spacing: 0 15px
+			position: relative
+			margin-top: 30px
+
+			td:first-child,th:first-child
+				padding-left: 30px
+				border-top-left-radius: 10px
+				border-bottom-left-radius: 10px
+
+			td:last-child,th:last-child
+				padding-right: 30px
+				border-top-right-radius: 10px
+				border-bottom-right-radius: 10px
+
+			thead
+				tr
+					height: 60px
+					position: relative
+
+					th
+						text-align: left
+						font-weight: 700
+						color: $primary
+
+
+			tbody
+				tr
+					background: #fff
+					height: 60px
+					box-shadow: $box-shadow
+
+					&.new
+						background: transparent
+						box-shadow: none
+
+						td
+							border: 4px dashed transparentize($primary, .75)
+							text-align: center
+							font-weight: 700
+							transition: .24s
+
+							&:hover
+									border-color: transparentize($primary, .6)
+									a
+										color: $primary !important
+
+							a
+								color: transparentize($primary, .25)
+								height: 60px
+								width: 100%
+								display: flex
+								align-items: center
+								justify-content: center
+								text-decoration: none
+								font-weight: 500
+								transition: .24s
+								font-size: 1rem
+
+
+
+	// Settings Page
+
+	#settings
+		display: flex
+		flex-wrap: wrap
+		max-width: 700px
+		justify-content: center
+		margin: auto
+
+		.input
+			box-shadow: $box-shadow
+			margin: 14px 20px
+			width: 300px
+
+
+
+
+	// Product Page
+
+	#product
+		background: #fff
+		width: 90%
+		max-width: 800px
+		margin: auto
+		margin-top: 200px
+		padding: 30px 60px
+		border-radius: 30px
+		box-shadow: $box-shadow
+		position: relative
+
+		footer
+			margin-top: 2rem
+
+			.price span
+					font-weight: 700
+					color: $primary
+
+		.back
+			color: $primary
+			opacity: .65
+			text-decoration: none
+			transition: .24s
+			position: absolute
+			top: -32px
+			left: 0
+
+			&:hover
+				opacity: .85
+
+
+
+
+
+
+
+	// Media Queries & Grid
+	.row
+		display: flex
+		flex-wrap: wrap
+
+
+		.col-12
+			flex: 0 0 auto
+			width: 100%
+
+
+	@media (min-width: 768px)
+		.col-md-9
+			flex: 1 0 0% !important
+			width: 75% !important
+
+		.col-md-3
+			flex: 0 0 auto !important
+			width: 25% !important
+
+		.resource
+			width: 47.5% !important

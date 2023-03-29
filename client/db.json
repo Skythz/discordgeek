@@ -1,0 +1,54 @@
+{
+  "resources": [
+    {
+      "id": 1,
+      "name": "Auto Moderator",
+      "desc": "Lorem ipsum bla bla bla bla bla asdhidhsad hjasdh asjkd asjdhsa hdasd asjdhn jdsa this is a great resource",
+      "date": "20/4/2020",
+      "price": 2.99,
+      "owner": "Skythz Studios",
+      "sold": 175,
+      "tag": "tag1"
+    },
+    {
+      "id": 2,
+      "name": "Randomizer",
+      "desc": "Lorem ipsum bla bla bla bla bla asdhidhsad hjasdh asjkd asjdhsa hdasd asjdhn jdsa this is a great resource",
+      "date": "10/4/2021",
+      "price": 3.99,
+      "owner": "Skythz Studios",
+      "sold": 82,
+      "tag": "tag2"
+    },
+    {
+      "id": 3,
+      "name": "String Splitter",
+      "desc": "Lorem ipsum bla bla bla bla bla asdhidhsad hjasdh asjkd asjdhsa hdasd asjdhn jdsa this is a great resource",
+      "date": "25/8/2019",
+      "owner": "Skythz Studios",
+      "sold": 12,
+      "tag": "tag1"
+    },
+    {
+      "id": 4,
+      "name": "Ticket Manager",
+      "desc": "Lorem ipsum bla bla bla bla bla asdhidhsad hjasdh asjkd asjdhsa hdasd asjdhn jdsa this is a great resource",
+      "date": "28/2/2021",
+      "price": 5.99,
+      "owner": "Skythz's Other Studios",
+      "sold": 751,
+      "tag": "tag2"
+    }
+  ],
+
+
+  "users": {
+    "Skythz Studios": {
+      "id": 1,
+      "resources": [
+        1, 2, 3
+      ],
+      "balance": 922.99
+    }
+  }
+}
